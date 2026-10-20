@@ -200,10 +200,10 @@ def generate_all_figures():
     )
 
     fig = plot_risk_free_rate(data)
-    fig.savefig("rf_plot.png", dpi=300, bbox_inches="tight")
+    fig.savefig("figures/rf_plot.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-    print("Saved: rf_plot.png")
+    print("Saved: figures/rf_plot.png")
 
 
 if __name__ == "__main__":

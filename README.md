@@ -55,6 +55,10 @@ figures.
 **`notebook_final.ipynb`** ties the whole pipeline together end to end and is the best
 starting point for following the analysis in order.
 
+**`data/`** holds the frozen snapshots (`*_snapshot.csv`, the ESG `.xlsx`, the lambda-grid
+archive) consumed by `load_or_fetch_*`-style functions. **`figures/`** holds every static
+plot and mp4 animation the notebook generates.
+
 ## Getting started
 
 ```bash

@@ -65,7 +65,7 @@ def load_or_fetch_pe_snapshot(pe_benchmark_tickers, snapshot_path):
     return pe_series, f"P/E snapshot retrieved on {snapshot_date}"
 
 
-def plot_realized_vol_ranking(daily_prices, filename="tsla_realized_vol_ranking.png"):
+def plot_realized_vol_ranking(daily_prices, filename="figures/tsla_realized_vol_ranking.png"):
     daily_log_returns = compute_returns(prices=daily_prices, method="log")
     rolling_vol = daily_log_returns.rolling(30).std() * np.sqrt(252)
     median_vol = rolling_vol[TICKERS + ["TSLA"]].median().sort_values(ascending=False)
@@ -89,7 +89,7 @@ def plot_realized_vol_ranking(daily_prices, filename="tsla_realized_vol_ranking.
     plt.close(fig)
 
 
-def plot_realized_vol_rank_over_time(daily_prices, filename="tsla_vol_rank_over_time.png"):
+def plot_realized_vol_rank_over_time(daily_prices, filename="figures/tsla_vol_rank_over_time.png"):
     daily_log_returns = compute_returns(prices=daily_prices, method="log")
     rolling_vol = daily_log_returns.rolling(30).std() * np.sqrt(252)
     rolling_vol = rolling_vol.dropna()
@@ -120,7 +120,7 @@ def plot_realized_vol_rank_over_time(daily_prices, filename="tsla_vol_rank_over_
     plt.close(fig)
 
 
-def plot_normalized_price_vs_universe(daily_prices, filename="tsla_normalized_price_vs_universe.png"):
+def plot_normalized_price_vs_universe(daily_prices, filename="figures/tsla_normalized_price_vs_universe.png"):
     monthly_prices = daily_prices.resample("ME").last()
     normalized = monthly_prices / monthly_prices.iloc[0] * 100
     universe_median = normalized[TICKERS].median(axis=1)
@@ -181,7 +181,7 @@ def plot_normalized_price_vs_universe(daily_prices, filename="tsla_normalized_pr
     plt.close(fig)
 
 
-def plot_pe_valuation_snapshot(filename="tsla_pe_vs_benchmarks.png"):
+def plot_pe_valuation_snapshot(filename="figures/tsla_pe_vs_benchmarks.png"):
     pe_benchmark_tickers = {
         "TSLA": "TSLA",
         "S&P 500 (SPY)": "SPY",
@@ -215,7 +215,7 @@ def plot_pe_valuation_snapshot(filename="tsla_pe_vs_benchmarks.png"):
     return snapshot_label
 
 
-def plot_debt_equity_ratio(filename="tsla_debt_equity_ratio.png"):
+def plot_debt_equity_ratio(filename="figures/tsla_debt_equity_ratio.png"):
     # Quarterly Debt/Equity data 
     # Source: MacroTrends, cross-checked against SEC 10-K / 10-Q filings
     de_ratio_data = [

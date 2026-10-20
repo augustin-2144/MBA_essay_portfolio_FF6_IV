@@ -2,15 +2,17 @@ from pathlib import Path
 
 # Project paths
 BASE_DIR = Path(__file__).resolve().parent
-ESG_DATA_PATH = BASE_DIR / "LSEG_ESG_scores.xlsx"
-IMPLIED_VOLS_SNAPSHOT_PATH = BASE_DIR / "implied_vols_snapshot.csv"
-PRICES_SNAPSHOT_PATH = BASE_DIR / "prices_snapshot.csv"
-SPY_PRICES_SNAPSHOT_PATH = BASE_DIR / "spy_prices_snapshot.csv"
-FF6_FACTORS_SNAPSHOT_PATH = BASE_DIR / "ff6_factors_snapshot.csv"
-SPY_IVV_SNAPSHOT_PATH = BASE_DIR / "spy_ivv_snapshot.csv"
-TSLA_DAILY_PRICES_SNAPSHOT_PATH = BASE_DIR / "tsla_daily_prices_snapshot.csv"
-TSLA_PE_SNAPSHOT_PATH = BASE_DIR / "tsla_pe_snapshot.csv"
-CRYPTO_PRICES_SNAPSHOT_PATH = BASE_DIR / "crypto_prices_snapshot.csv"
+DATA_DIR = BASE_DIR / "data"
+FIGURES_DIR = BASE_DIR / "figures"
+ESG_DATA_PATH = DATA_DIR / "LSEG_ESG_scores.xlsx"
+IMPLIED_VOLS_SNAPSHOT_PATH = DATA_DIR / "implied_vols_snapshot.csv"
+PRICES_SNAPSHOT_PATH = DATA_DIR / "prices_snapshot.csv"
+SPY_PRICES_SNAPSHOT_PATH = DATA_DIR / "spy_prices_snapshot.csv"
+FF6_FACTORS_SNAPSHOT_PATH = DATA_DIR / "ff6_factors_snapshot.csv"
+SPY_IVV_SNAPSHOT_PATH = DATA_DIR / "spy_ivv_snapshot.csv"
+TSLA_DAILY_PRICES_SNAPSHOT_PATH = DATA_DIR / "tsla_daily_prices_snapshot.csv"
+TSLA_PE_SNAPSHOT_PATH = DATA_DIR / "tsla_pe_snapshot.csv"
+CRYPTO_PRICES_SNAPSHOT_PATH = DATA_DIR / "crypto_prices_snapshot.csv"
 
 # Study period
 START_DATE = "2015-01-01"
@@ -101,7 +103,7 @@ CRYPTO_TICKERS = ["BTC-USD", "ETH-USD"]
 
 # Diversification candidates: bonds, gold, REITs (descriptive illustration only, Chapitre 8)
 DIVERSIFICATION_TICKERS = ["TLT", "GLD", "VNQ"]
-DIVERSIFICATION_PRICES_SNAPSHOT_PATH = BASE_DIR / "diversification_prices_snapshot.csv"
+DIVERSIFICATION_PRICES_SNAPSHOT_PATH = DATA_DIR / "diversification_prices_snapshot.csv"
 
 # LSEG ESG settings
 ESG_SHEET_NAME = "ESG Summary"

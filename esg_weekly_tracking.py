@@ -27,9 +27,9 @@ import matplotlib.pyplot as plt
 ESG_THRESHOLD = 3.4
 LAMBDA = 0.25
 BASE_DIR = Path(__file__).resolve().parent
-POSITIONS_PATH = BASE_DIR / "esg_tracking_positions.csv"
-LOG_PATH = BASE_DIR / "esg_tracking_log.csv"
-POSITION_TABLE_FIGURE_PATH = BASE_DIR / "esg_realmoney_position_table.png"
+POSITIONS_PATH = BASE_DIR / "data" / "esg_tracking_positions.csv"
+LOG_PATH = BASE_DIR / "data" / "esg_tracking_log.csv"
+POSITION_TABLE_FIGURE_PATH = BASE_DIR / "figures" / "esg_realmoney_position_table.png"
 
 
 # Target weights from the frozen thesis pipeline (FF6 mu, hybrid Sigma at lambda=0.25, ESG >= 3.4)

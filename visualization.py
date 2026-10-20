@@ -115,7 +115,7 @@ def plot_correlation_matrix(corr_matrix,
 
     hide_spines(ax)
 
-    plt.savefig("correlation_matrix.png",dpi=300,bbox_inches="tight")
+    plt.savefig("figures/correlation_matrix.png",dpi=300,bbox_inches="tight")
     plt.tight_layout()
     if show:
         plt.show()
@@ -1036,7 +1036,7 @@ def animate_lambda_weights(lambda_weights,
                            steps_per_transition=15,
                            fps=36,
                            dpi=150,
-                           filename="lambda_weights_animation.mp4",
+                           filename="figures/lambda_weights_animation.mp4",
                            title="Portfolio Allocation as a Function of the Shrinkage Coefficient"):
     """
     Animates portfolio weights as bars that morph smoothly across the
@@ -1127,7 +1127,7 @@ def animate_lambda_risk_contributions(rc_grid,
                                        steps_per_transition=15,
                                        fps=36,
                                        dpi=150,
-                                       filename="lambda_risk_contributions_animation.mp4",
+                                       filename="figures/lambda_risk_contributions_animation.mp4",
                                        title="Risk Contribution as a Function of the Shrinkage Coefficient"):
     """
     Animates each asset's risk contribution (%) as bars that morph smoothly
@@ -1239,7 +1239,7 @@ def animate_lambda_risk_contributions(rc_grid,
 def animate_backtest_cumulative_performance(cum_perf,
                                              fps=10,
                                              dpi=150,
-                                             filename="backtest_cumulative_performance_animation.mp4",
+                                             filename="figures/backtest_cumulative_performance_animation.mp4",
                                              title="Rolling Backtest — Cumulative Performance"):
     """
     Animates the rolling-backtest cumulative performance curves month by
