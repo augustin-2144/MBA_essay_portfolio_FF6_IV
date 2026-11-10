@@ -100,5 +100,5 @@ would take years to accumulate a usable history.
 ## A note on AI-assisted development
 
 A meaningful part of this codebase, particularly the visualization and animation code, was
-written with the help of Claude Code. The author was already comfortable with Python but
+written with the help of Claude Code. I was already comfortable with Python but
 had no prior experience with most of the libraries this project required.
